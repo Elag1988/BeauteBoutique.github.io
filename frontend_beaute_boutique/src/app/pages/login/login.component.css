@@ -1,0 +1,22 @@
+.img-fluid{
+width: 100%; ;
+ height: 300px; 
+ margin-bottom: 40px;  
+}
+
+.Picture2{
+    opacity: 0.3;
+}
+
+.font1{
+    color:black;
+    margin-top: -300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.fomulario{
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
