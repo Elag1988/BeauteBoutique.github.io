@@ -19,11 +19,14 @@
 
 }
 
+.intro {
+    margin-top: 10%;
+}
+
 .card1{
 
     width: 800px;
-    margin-left: 200px;
-    margin-top: 100px;
+    margin: auto;
    
 }
 
@@ -49,9 +52,14 @@
     margin-top: 50px;
     margin-bottom: 100px;
 }
+
+.botones {
+    margin-top: 2.5%;
+    display: flex;
+}
+
 .boton1{
-    margin-left: 140px;
-    margin-top: 40px;
+    margin: auto;
     width: 150px;
     
 }
@@ -77,5 +85,14 @@
 .card-footer:hover{
     background-color:darkgray;
     font-weight: 800;
+}
+
+img {
+    margin:auto;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-evenly;
 }
 

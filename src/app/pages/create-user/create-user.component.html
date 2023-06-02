@@ -1,0 +1,39 @@
+<div class="Picture2" style="position: relative;">
+    <img src="../../../assets/Picture2.jpg" class="img-fluid" alt="Picture2">
+    
+  </div>
+
+  <div>
+    <h1 class="font1 text-center"
+     style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+     >Create your own account!</h1></div>
+  
+<div class="fomulario">
+     <form (ngSubmit)="createUser()" #createForm="ngForm"  class="row g-4">
+        <div class="cal1 col-md-4">
+          <label for="name" class="form-label">First name</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Type your name" [(ngModel)]="name" required>
+
+        
+          <label for="lastname" class="form-label">Last name</label>
+          <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Type your lastname" [(ngModel)]="lastname" required>
+       
+        
+          <label for="username" class="form-label">Username</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Type your username" aria-describedby="inputGroupPrepend2" [(ngModel)]="username" required>
+          </div>
+          
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" placeholder="Type your email" id="email" [(ngModel)]="email" required>
+
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Type your Password" id="password" [(ngModel)]="password" required>
+        </div>
+        
+        <div class="col-12">
+          <button  type="submit"  [disabled]="!createForm.form.valid"   class="btn btn-outline-dark btnsignup" type="submit">Sign up</button>
+        </div>
+      </form>
+    </div>
