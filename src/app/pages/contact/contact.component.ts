@@ -1,5 +1,6 @@
 import { Component, OnInit  } from '@angular/core';
 import * as L from 'leaflet';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -8,5 +9,3 @@ import * as L from 'leaflet';
 export class ContactComponent {
   
 }
-
-
