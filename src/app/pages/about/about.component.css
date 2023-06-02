@@ -5,17 +5,22 @@
   }
   
   h1 {
-    font-size: 28px;
+    font-size: 58px;
     margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    
+
   }
   
   .card {
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid;
+    border-radius: 10px;
+    color: #f27ccc;
+
   }
   
   .card-body {
-    padding: 20px;
+    padding: 40px;
   }
   
   p {
@@ -24,8 +29,13 @@
   }
   
   h2 {
-    font-size: 24px;
+    font-size: 34px;
     margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+  }
+  .img-circular {
+    border-radius: 20%;
   }
   
   .row {
