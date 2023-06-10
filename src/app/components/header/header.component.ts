@@ -32,5 +32,8 @@ directContact() {
 directProfile() {
   this.router.navigate(['/profile'])
 }
+directWelcome() {
+  this.router.navigate([''])
+}
 
 }

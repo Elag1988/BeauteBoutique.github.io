@@ -7,37 +7,46 @@ import { ProductsComponent } from './pages/products/products.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
+import { WelcomepageComponent } from './pages/welcomepage/welcomepage.component';
 
 const routes: Routes = [
-{
-  path:"login",component:LoginComponent
-},
+  {
+    path: '',
+    component: WelcomepageComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
 
-{
-  path:"create",component:CreateUserComponent
-},
-{
-  path:"home",component:HomeComponent
-},
-{
-  path:"products",component:ProductsComponent
-},
-{
-  path:"about",component:AboutComponent
-},
-{
-  path:"contact",component:ContactComponent
-},
-{
-  path:"profile",component:ProfileComponent
-}
-
-
-
+  {
+    path: 'create',
+    component: CreateUserComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
