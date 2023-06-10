@@ -2,7 +2,7 @@
 width: 100%;
 }
 .bg-custom{
-    background-color:#DCDCDC;
+    background-color:#e8d1c6cc;
 }
 
 .logo{
@@ -13,4 +13,27 @@ width: 100%;
 text-decoration: underline;
 
 }
+
+
+.nav-link{
+    font-size: 1.5rem;
+
+}
+
+.boton{
+    display: flex;
+    justify-content:flex-start;
+
+ 
+}
+
+.nav-item{
+    margin: auto;
+   
+    
+
+
+}
+
+
 

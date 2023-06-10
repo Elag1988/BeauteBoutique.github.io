@@ -17,6 +17,4 @@ export class LoginComponent {
     this.userServices.login(this.username, this.password)
   }
 
-
-
 }
