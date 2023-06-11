@@ -1,0 +1,7 @@
+.lateral{
+    background-color: #e8d1c6cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}

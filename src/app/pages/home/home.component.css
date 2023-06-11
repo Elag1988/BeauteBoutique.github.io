@@ -1,10 +1,10 @@
-.carousel-inner  .carousel-item{
-    margin-top: 30px;
-    margin-left: 35%;
-    width: 650px;
-    height: 650px;
-}
 
+.title {
+    text-align: center;
+    margin: 2% 0 3% 0 ;
+    font-weight: bolder;
+    color: #90827a;
+}
 .btn-customize{
     margin-left: 100px;
     margin-right: 150px;
@@ -20,15 +20,17 @@
 
 }
 
-.intro {
-    margin-top: 10%;
+.video {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5%
 }
 
-.card1{
+.video iframe {
 
-    width: 800px;
-    margin: auto;
-   
+    width: 700px;
+    height: 400px;
+    
 }
 
 .card-title1{
@@ -38,13 +40,19 @@
     font-style:initial;
     font-size:x-large;
     margin-bottom: 30px;
-    margin-top: -60px;
+    margin-top: 2%;
 
 }
 
+.card-body h6 {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
 .card-text{
-    text-align:justify;
-    margin-top: 20px;
+    margin: auto;
+    margin-top: 2%;
+    width: 90%;
 
 }
 .embed-responsive-item{

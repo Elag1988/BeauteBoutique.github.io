@@ -1,6 +1,10 @@
 .container{
 width: 100%;
 }
+
+.carousel {
+    height: 800px;
+}
 .bg-custom{
     background-color:#e8d1c6cc;
 }
@@ -14,10 +18,21 @@ text-decoration: underline;
 
 }
 
+.navbar-brand {
+    cursor: pointer;
+}
+
 
 .nav-link{
     font-size: 1.5rem;
 
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgba(24, 24, 24, 0.628);
+    text-transform: uppercase;
+    cursor: pointer ;
 }
 
 .boton{
