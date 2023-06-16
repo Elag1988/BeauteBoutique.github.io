@@ -1,55 +1,250 @@
-
-
-<app-header></app-header>>
+<app-header></app-header>
 
 <main>
-    <div class="container py-3">
-        <div class="p-5 mb-4 bg-body-tertiary border rounded-3">
-        <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Te damos la bienvenida a tu perfil</h1>
-        <p class="col-md-8 fs-4">Aquí puedes visualizar, actualizar tus preferencias y verificar lo que deseas hacer con tus productos para que siempre veas lo que quieres ver</p>
-        </div>
-        </div>
+  <div class="container py-3">
+    <div class="p-5 mb-4 bg-body-tertiary border rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold title">
+          Te damos la bienvenida a tu perfil
+        </h1>
+        <p class="col-md-8 fs-4">
+          Aquí puedes visualizar, actualizar tus preferencias y verificar lo que
+          deseas hacer con tus productos para que siempre veas lo que quieres
+          ver
+        </p>
+      </div>
+    </div>
 
-    <div class="row align-items-md-stretch">
-        <div class="col-md-6">
+    <div *ngIf="!editValue; else editInfo"class="row align-items-md-stretch">
+      <div class="col-md-6">
         <div class="h-100 p-5 lateral rounded-3">
-            <h2>Tu imagen de perfil</h2>
-            <br>
-            <div>
-                <img src="https://campusromero.pe/wp-content/uploads/avatars/14689/62094a055ec67-bpfull.jpg" alt="" height="280" class="rounded-5">
-            </div>
-            <br>
-            <button class="btn btn-outline-secondary" type="button">Editar imagen</button>
+          <h2>Tu imagen de perfil</h2>
+          <br />
+          <div>
+            <img
+              src="https://campusromero.pe/wp-content/uploads/avatars/14689/62094a055ec67-bpfull.jpg"
+              alt=""
+              height="280"
+              class="rounded-5"
+            />
+          </div>
+          <br />
+          <button class="btn btn-outline-secondary" type="button">
+            Editar imagen
+          </button>
         </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+          <h2>Información del perfil</h2>
+          <div class="mb-3">
+            
+            <label for="exampleFormControlInput1" class="form-label"
+                >Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Write your name"
+                name = "name"
+                [(ngModel)] ="userProfile.name"
+                disabled="true"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Lastname</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Write your Lastname"
+                name = "lastname"
+                [(ngModel)] ="userProfile.lastname"
+                disabled="true"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="write your name@example.com"
+                name = "email"
+                [(ngModel)] ="userProfile.email"
+                disabled="true"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Phone Number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Write your phone number"
+                name="phonenumber"
+                [(ngModel)] ="userProfile.phonenumber"
+                disabled="true"
+              />
+
+              <label for="exampleFormControlInput1" class="form-label"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Write your username"
+                name="username"
+                [(ngModel)] ="userProfile.username"
+                disabled="true"
+              />
+
+              <label for="exampleFormControlInput1" class="form-label"
+                >Address</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Write your Address"
+                name="address"
+                [(ngModel)] ="userProfile.address"
+                disabled="true"
+              />
+            </div>
+            <div class="mb-3">
+            
+          </div>
+          <button
+            (click)="editProfile()"
+            class="btn btn-outline-secondary"
+            type="button"
+          >
+            Editar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #editInfo>
+    <form class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 lateral rounded-3">
+            <h2>Tu imagen de perfil</h2>
+            <br />
+            <div>
+              <img
+                src="https://campusromero.pe/wp-content/uploads/avatars/14689/62094a055ec67-bpfull.jpg"
+                alt=""
+                height="280"
+                class="rounded-5"
+              />
+            </div>
+            <br />
+            <button class="btn btn-outline-secondary" type="button">
+              Editar imagen
+            </button>
+          </div>
         </div>
         <div class="col-md-6">
-        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+          <div class="h-100 p-5 bg-body-tertiary border rounded-3">
             <h2>Información del perfil</h2>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tu Nombre Aquí">
-                <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tu Apellido Aquí">
-                <label for="exampleFormControlInput1" class="form-label">Dirección Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                <label for="exampleFormControlInput1" class="form-label">Nombre De Usuario</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="User">
-                <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="*************">
-                <label for="exampleFormControlInput1" class="form-label">Dirección</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="cll 1 # 2-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Write your name"
+                name = "name"
+                [(ngModel)] ="userProfile.name"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Lastname</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Write your Lastname"
+                name = "lastname"
+                [(ngModel)] ="userProfile.lastname"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+                name = "email"
+                [(ngModel)] ="userProfile.email"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                name = "username"
+                placeholder="Write your Username"
+                [(ngModel)] ="userProfile.username"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="*************"
+                name = "password"
+                [(ngModel)] ="userProfile.password"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Phone Number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Write your phone number"
+                name="phonenumber"
+                [(ngModel)] ="userProfile.phonenumber"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Address</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                name = "address"
+                placeholder="Write your Address"
+                [(ngModel)] ="userProfile.address"
+              />
             </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Preferencias</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            <div class=" updateButtons d-flex">
+              <button
+                (click)="updateProfile()"
+                class="btn btn-outline-secondary"
+                type="submit"
+              >
+                Guardar
+              </button>
+              <button class="btn btn-outline-secondary" (click)="cancelUpdate()">Cancel</button>
             </div>
-            <button class="btn btn-outline-secondary" type="button">Editar</button>
+            </div>
         </div>
-        </div>
-    </div>
-    </div>
+      </form>
+  </ng-template>
 </main>
 
 <app-footer></app-footer>
-

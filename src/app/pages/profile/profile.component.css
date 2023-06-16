@@ -5,3 +5,11 @@
     align-items: center;
     justify-content: space-around;
 }
+
+.updateButtons {
+    justify-content: center;
+}
+
+.updateButtons button {
+    margin: 6%;
+}

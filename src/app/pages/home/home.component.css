@@ -1,8 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rubik+Mono+One&display=swap');
 .title {
     text-align: center;
     margin: 2% 0 3% 0 ;
-    font-weight: bolder;
+    font-family: 'Rubik Mono One', sans-serif;
     color: #90827a;
 }
 .btn-customize{
